@@ -1,3 +1,44 @@
+//nav scroll
+document.getElementById("homelink").addEventListener("click", function (event) {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+document
+  .getElementById("aboutlink")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+  });
+
+document
+  .getElementById("serviceslink")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("Services").scrollIntoView({ behavior: "smooth" });
+  });
+document
+  .getElementById("Projectslink")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document
+      .getElementById("myprojects")
+      .scrollIntoView({ behavior: "smooth" });
+  });
+document
+  .getElementById("Testimonialslink")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document
+      .getElementById("Testimonials")
+      .scrollIntoView({ behavior: "smooth" });
+  });
+document
+  .getElementById("contactlink")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("Contact").scrollIntoView({ behavior: "smooth" });
+  });
+
 //photo slider
 const slides = document.querySelectorAll(".slide");
 let current = 0;
@@ -30,6 +71,27 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(aboutSection);
+
+//project filter
+const buttons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".project-card");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    buttons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    cards.forEach((card) => {
+      if (filter === "all" || card.classList.contains(filter)) {
+        card.classList.remove("hide");
+      } else {
+        card.classList.add("hide");
+      }
+    });
+  });
+});
 
 //testimonials pagination
 const slideBox = document.querySelectorAll(".testimonial");

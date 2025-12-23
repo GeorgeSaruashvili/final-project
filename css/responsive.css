@@ -1,0 +1,150 @@
+@media (max-width: 768px) {
+  body {
+    max-width: 90%;
+  }
+  .navigation {
+    display: none;
+  }
+  .CVdownload {
+    display: none;
+  }
+  .leftside {
+    margin-top: 100px;
+    width: 100%;
+  }
+  .myself {
+    font-size: 20px;
+  }
+  .greeting {
+    font-size: 15px;
+  }
+  .leftside button {
+    display: none;
+  }
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-title span {
+    margin: 0;
+    font-size: 50px;
+  }
+  .leftside {
+    gap: 5px;
+  }
+  .leftside p {
+    display: none;
+  }
+  .creator-slider {
+    display: block;
+  }
+  .rightside {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .slider {
+    width: 100%;
+  }
+  .responsivenodis {
+    display: none;
+  }
+  .social_media {
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+  .myphotoconteiner img {
+    display: none;
+  }
+  .myphotoconteiner {
+    display: none;
+  }
+  .about-me {
+    max-width: 100%;
+  }
+  #Services {
+    margin-top: 0;
+  }
+  .box {
+    max-width: 100%;
+  }
+  .slidebox {
+    max-width: 100%;
+  }
+  .projectbox {
+    width: 100%;
+  }
+  .project-card {
+    width: 100%;
+  }
+
+  .testimonial-text {
+    flex-direction: column-reverse;
+    padding: 0;
+    font-size: 13px;
+  }
+  .slidebox img {
+    width: 50%;
+    padding-bottom: 60%;
+  }
+  .upperpart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    width: 100%;
+  }
+  .field {
+    width: 100%;
+  }
+  #message {
+    width: 100%;
+  }
+  #contact-form button {
+    width: 100%;
+  }
+  .offer {
+    align-items: flex-start;
+  }
+  .projectscreenshot {
+    width: 200px;
+    height: 200px;
+  }
+  .project-card {
+    transition: all 0.4s ease;
+  }
+
+  .project-card.hide {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    position: absolute;
+  }
+  .projects {
+    display: flex;
+  }
+  .projectscreenshot {
+    width: 200px;
+    height: 200px;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+  }
+  .footernav {
+    margin-top: 30px;
+  }
+  .footernav nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .medialiks {
+    max-width: 100%;
+  }
+}

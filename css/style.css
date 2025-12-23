@@ -222,6 +222,62 @@ header {
 .logos {
   width: 70px;
 }
+.project-card {
+  transition: all 0.4s ease;
+}
+
+.project-card.hide {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  position: absolute;
+}
+.filter-btn .active {
+  background-color: orange;
+}
+.filter-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0 0;
+}
+.filter-btn {
+  font-size: 20px;
+  color: #110101;
+  border-radius: 10px;
+  padding: 3px;
+}
+.web-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px auto auto;
+  flex-wrap: wrap;
+}
+.projectbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 280px;
+  border-radius: 20px;
+}
+.projectbox img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.projectbox p {
+  color: white;
+  font-weight: 600;
+}
+.projectbox span {
+  color: #fd6f00;
+}
+
 #Testimonials {
   color: black;
 }
@@ -253,7 +309,7 @@ header {
   border-radius: 20px;
   align-items: center;
   justify-content: center;
-  height: 220px;
+  max-height: 700px;
 }
 .slidebox img {
   width: 220px;
@@ -266,6 +322,12 @@ header {
   padding: 20px;
   gap: 15px;
 }
+.orange {
+  color: orange;
+  font-size: 30px;
+  font-weight: 700;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -352,6 +414,9 @@ footer {
 .footernav {
   color: white;
   max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   align-items: center;
   margin: 200px auto auto;
@@ -364,6 +429,7 @@ footer {
   margin: 40px auto;
   max-width: 40%;
   display: flex;
+  flex-wrap: wrap;
 
   gap: 10px;
 }
