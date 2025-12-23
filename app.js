@@ -46,3 +46,88 @@ dots.forEach((dot) => {
     dots[index].classList.add("active");
   });
 });
+///forms
+
+const form = document.getElementById("contact-form");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  if (!validateForm()) return;
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(
+      "https://borjomi.loremipsum.ge/api/send-message",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    const data = await response.json();
+
+    if (data.status === 1) {
+      result.innerText = data.desc;
+      result.style.color = "green";
+      form.reset();
+    } else {
+      result.innerText = data.desc || "Something went wrong";
+      result.style.color = "red";
+    }
+  } catch (error) {
+    result.innerText = "Server error ❌";
+    result.style.color = "red";
+  }
+});
+
+function validateForm() {
+  let valid = true;
+  valid &= checkRequired("name", "Name is required");
+  valid &= checkEmail();
+  valid &= checkMessage();
+  return !!valid;
+}
+
+function checkRequired(id, msg) {
+  const input = document.getElementById(id);
+  if (input.value.trim() === "") {
+    setError(input, msg);
+    return false;
+  }
+  setSuccess(input);
+  return true;
+}
+
+function checkEmail() {
+  const email = document.getElementById("email");
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!regex.test(email.value.trim())) {
+    setError(email, "Invalid email");
+    return false;
+  }
+  setSuccess(email);
+  return true;
+}
+
+function checkMessage() {
+  const msg = document.getElementById("message");
+  if (msg.value.trim().length < 10) {
+    setError(msg, "Min 10 characters");
+    return false;
+  }
+  setSuccess(msg);
+  return true;
+}
+
+function setError(input, message) {
+  input.nextElementSibling.innerText = message;
+  input.style.borderColor = "red";
+}
+
+function setSuccess(input) {
+  input.nextElementSibling.innerText = "";
+  input.style.borderColor = "green";
+}
