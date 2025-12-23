@@ -30,3 +30,19 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(aboutSection);
+
+//testimonials pagination
+const slideBox = document.querySelectorAll(".testimonial");
+const dots = document.querySelectorAll(".dot");
+
+dots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    const index = dot.dataset.index;
+
+    slideBox.forEach((s) => s.classList.remove("active"));
+    dots.forEach((d) => d.classList.remove("active"));
+
+    slideBox[index].classList.add("active");
+    dots[index].classList.add("active");
+  });
+});

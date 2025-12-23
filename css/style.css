@@ -183,3 +183,107 @@ header {
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+#Services {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.offer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.box {
+  max-width: 280px;
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.box:hover {
+  transition: 2s ease;
+  transform: scale(1.2);
+  border: 10px solid rgb(51, 33, 51);
+}
+.logos {
+  width: 70px;
+}
+#Testimonials {
+  color: black;
+}
+.active-box {
+  display: flex;
+  justify-content: space-around;
+}
+.offer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 100px;
+}
+.testimonial.active {
+  display: block;
+}
+.testimonial {
+  display: none;
+}
+
+.slidebox {
+  margin: 50px auto;
+  background-color: white;
+  display: flex;
+  max-width: 70%;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+}
+.slidebox img {
+  width: 220px;
+  padding: 20px;
+}
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.dot {
+  display: inline-block;
+  height: 10px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 30px;
+  cursor: pointer;
+  margin: 0 4px;
+}
+.dot.active {
+  background-color: orange;
+  width: 30px;
+}
