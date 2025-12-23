@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-  body {
+  .conteiner {
     max-width: 90%;
   }
   .navigation {
@@ -15,7 +15,7 @@
   .myself {
     font-size: 20px;
   }
-  .greeting {
+  .greetings {
     font-size: 15px;
   }
   .leftside button {
@@ -109,7 +109,7 @@
   #contact-form button {
     width: 100%;
   }
-  .offer {
+  .test-words {
     align-items: flex-start;
   }
   .projectscreenshot {
@@ -134,17 +134,21 @@
     height: 200px;
   }
 
-  footer {
+  .responsimp {
     flex-direction: column-reverse;
   }
   .footernav {
     margin-top: 30px;
   }
-  .footernav nav {
+  .responsimp nav {
     display: flex;
     flex-direction: column;
   }
   .medialiks {
     max-width: 100%;
+    margin-top: 60px;
+  }
+  .lastline {
+    margin-top: 30px;
   }
 }

@@ -6,7 +6,6 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
 header {
   position: fixed;
   width: 80%;
@@ -36,6 +35,7 @@ header {
   background-color: #fd6f00;
   color: white;
   font-size: 20px;
+  border-radius: 10px;
 }
 .git {
   width: 35px;
@@ -58,7 +58,7 @@ header {
   border-radius: 5px;
   font-size: 20px;
 }
-.greeting {
+.greetings {
   font-weight: 500;
   font-size: 25px;
 }
@@ -164,7 +164,7 @@ header {
 .progress-bar {
   height: 100%;
   width: 0;
-  background: orange;
+  background: #fd6f00;
   transition: width 3s ease;
   position: relative;
   border-radius: 10px;
@@ -179,12 +179,11 @@ header {
   width: 14px;
   height: 14px;
   background: #fff;
-  border: 3px solid #f4a261;
+  border: 3px solid #fd6f00;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 #Services {
-  margin-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,7 +232,7 @@ header {
   position: absolute;
 }
 .filter-btn .active {
-  background-color: orange;
+  background-color: #fd6f00;
 }
 .filter-buttons {
   display: flex;
@@ -241,12 +240,20 @@ header {
   align-items: center;
   justify-content: center;
   margin: 100px 0 0;
+  flex-wrap: wrap;
 }
 .filter-btn {
   font-size: 20px;
   color: #110101;
   border-radius: 10px;
   padding: 3px;
+}
+.filter-btn :hover {
+  border-color: #110101;
+  color: #fd6f00;
+}
+.filter-btn.active {
+  background-color: #fd6f00;
 }
 .web-projects {
   display: flex;
@@ -285,7 +292,7 @@ header {
   display: flex;
   justify-content: space-around;
 }
-.offer {
+.test-words {
   color: white;
   display: flex;
   flex-direction: column;
@@ -323,7 +330,7 @@ header {
   gap: 15px;
 }
 .orange {
-  color: orange;
+  color: #fd6f00;
   font-size: 30px;
   font-weight: 700;
 }
@@ -346,7 +353,7 @@ header {
   margin: 0 4px;
 }
 .dot.active {
-  background-color: orange;
+  background-color: #fd6f00;
   width: 30px;
 }
 .upperpart {
@@ -398,7 +405,7 @@ textarea.success-border {
   display: block;
 }
 #contact-form button {
-  background-color: orange;
+  background-color: #fd6f00;
   width: 230px;
   height: 50px;
   border-radius: 10px;
@@ -406,7 +413,7 @@ textarea.success-border {
   color: white;
   font-weight: 700;
 }
-footer {
+.responsimp {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -421,9 +428,12 @@ footer {
   align-items: center;
   margin: 200px auto auto;
 }
-.footernav nav {
+
+.responsimp nav {
   display: flex;
   gap: 20px;
+  font-size: 17px;
+  font-weight: 500;
 }
 .medialiks {
   margin: 40px auto;
