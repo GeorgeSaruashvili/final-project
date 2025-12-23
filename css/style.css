@@ -112,3 +112,74 @@ header {
   justify-content: center;
   padding-top: 30px;
 }
+.myphotoconteiner {
+  width: 40%;
+  height: 500px;
+}
+#about {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+#about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.about-me {
+  margin: 0 auto;
+  color: white;
+  max-width: 50%;
+}
+.skillset {
+  font-size: 15px;
+}
+.title {
+  font-size: 40px;
+  font-weight: 800;
+}
+.skill {
+  padding-top: 15px;
+}
+.skill span {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.progress_bar {
+  margin-top: 30px;
+}
+
+.progress {
+  width: 100%;
+  height: 8px;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: orange;
+  transition: width 3s ease;
+  position: relative;
+  border-radius: 10px;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 3px solid #f4a261;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
