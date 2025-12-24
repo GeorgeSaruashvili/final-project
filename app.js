@@ -193,3 +193,12 @@ function setSuccess(input) {
   input.nextElementSibling.innerText = "";
   input.style.borderColor = "green";
 }
+
+// burger
+
+const burger = document.getElementById("burger");
+const navigation = document.getElementById("navigation");
+
+burger.addEventListener("click", () => {
+  navigation.classList.toggle("active");
+});

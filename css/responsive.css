@@ -3,17 +3,41 @@
     max-width: 90%;
   }
   .navigation {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     display: none;
+    z-index: 999;
   }
-  .CVdownload {
-    display: none;
+  .navigation.active {
+    display: flex;
   }
+
+  .burger {
+    display: flex;
+    margin-top: 30px;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+  .nav-conteiner {
+    display: flex;
+  }
+
   .leftside {
     margin-top: 100px;
     width: 100%;
   }
   .myself {
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 600;
   }
   .greetings {
     font-size: 15px;
@@ -31,6 +55,7 @@
   }
   .leftside {
     gap: 5px;
+    margin-top: 230px;
   }
   .leftside p {
     display: none;
@@ -150,5 +175,8 @@
   }
   .lastline {
     margin-top: 30px;
+  }
+  #text {
+    display: none;
   }
 }
