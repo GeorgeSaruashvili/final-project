@@ -201,4 +201,43 @@ const navigation = document.getElementById("navigation");
 
 burger.addEventListener("click", () => {
   navigation.classList.toggle("active");
+
+  //footer nav
 });
+document.getElementById("fhome").addEventListener("click", function (event) {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+document.getElementById("fabout").addEventListener("click", function (event) {
+  event.preventDefault();
+  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+});
+
+document
+  .getElementById("fservices")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("Services").scrollIntoView({ behavior: "smooth" });
+  });
+document
+  .getElementById("fprojects")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document
+      .getElementById("myprojects")
+      .scrollIntoView({ behavior: "smooth" });
+  });
+document
+  .getElementById("ftestimonials")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document
+      .getElementById("Testimonials")
+      .scrollIntoView({ behavior: "smooth" });
+  });
+document
+  .getElementById("fcontacts")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("Contact").scrollIntoView({ behavior: "smooth" });
+  });
